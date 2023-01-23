@@ -10,8 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_23_141253) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "from_date"
+    t.date "to_date"
+    t.string "status", default: "pending"
+    t.bigint "horse_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["horse_id"], name: "index_bookings_on_horse_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "horses", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.string "breed"
+    t.string "location"
+    t.text "description"
+    t.float "price"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_horses_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bookings", "horses"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "horses", "users"
 end
