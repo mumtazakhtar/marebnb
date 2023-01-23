@@ -1,0 +1,11 @@
+<h1>Welcome to Marebnb</h1>
+
+<ul>
+  <%= @horses.each do |horse|%>
+    <li><%= horse.name %></li>
+    <li><%= horse.age %></li>
+    <li><%= horse.breed %></li>
+    <li><%= horse.price %></li>
+    <li><%= horse.description %></li>
+  <% end %>
+</ul>
