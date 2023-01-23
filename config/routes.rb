@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :horses, except: [:index] do
     resources :bookings
   end
+  
 end

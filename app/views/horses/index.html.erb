@@ -2,7 +2,7 @@
 
 <ul>
   <%= @horses.each do |horse|%>
-    <li><%= horse.name %></li>
+    <li><%=link_to horse.name, horse_path(horse) %></li>
     <li><%= horse.age %></li>
     <li><%= horse.breed %></li>
     <li><%= horse.price %></li>
