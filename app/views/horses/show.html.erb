@@ -1,5 +1,25 @@
-<%= @horse.name %>
-<%= @horse.price %>
-<%= @horse.breed %>
-<%= @horse.location %>
-<%= @horse.description %>
+<div class="container">
+  <div class="wrapper">
+    <div class="card-horse">
+      <h2><%= @horse.name %></h2>
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai"/>
+    </div>
+    <div class="wrap">
+      <div>
+        <p><b>Name :</b><%= @horse.name%>
+        <p><b>Breed :</b><%= @horse.breed %></p>
+        <p><b>Location:</b><%= @horse.location %></p>
+        <p><b>Price:</b><%= @horse.price %></p>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="description">
+      <h2>Description</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<%= @horse.description %></p>
+    </div>
+    <div>
+      <p><%= button_to 'Request a booking' %></p>
+    </div>
+  </div>
+</div>
