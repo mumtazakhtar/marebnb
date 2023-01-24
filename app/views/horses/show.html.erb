@@ -1,26 +1,41 @@
 <div class="container">
+
   <div class="wrapper">
     <div class="card-horse">
       <h2><%= @horse.name %></h2>
-      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai"/>
+      <% if @horse.photo.key %>
+      <%= cl_image_tag @horse.photo.key, height: 500, width: 600, crop: :fill %>
+      <% end %>
     </div>
     <div class="wrap">
-      <div>
-        <p>Name : <%= @horse.name %>
-        <p>Age : <%= @horse.age %>
-        <p>Breed : <%= @horse.breed %></p>
-        <p>Location : <%= @horse.location %></p>
-      </div>
+      <h2>Details</h2>
+      <p>Name : <%= @horse.name %>
+      <p>Age : <%= @horse.age %>
+      <p>Breed : <%= @horse.breed %></p>
+      <p>Location : <%= @horse.location %></p>
     </div>
   </div>
-  <div class="wrapper">
+
+  <div class="wrapper" >
     <div class="description">
       <h2>Description</h2>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry <br/><%= @horse.description %></p>
     </div>
-    <div>
-      <p><b></b><%= @horse.price %>€</p>
-      <p><%= button_to 'Request a booking' %></p>
+    <div id="price-card">
+      <p>€<%= @horse.price %> per day</p>
+      <%= link_to 'Request a booking', root_path,  class: "btn-show"%>
     </div>
   </div>
+
+  <div class="edit">
+    <% if @horse.user == current_user%>
+      <%= link_to 'Edit', edit_horse_path(@horse), class: "btn-show" %>
+      <%= link_to 'Delete', horse_path(@horse), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"}, class:"btn-show" %>
+    <% end %>
+  </div>
+
+ <div>
+   <%= link_to 'Back to home', root_path,  class: "btn-show"%>
+ </div>
+
 </div>

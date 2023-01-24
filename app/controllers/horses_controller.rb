@@ -13,6 +13,7 @@ class HorsesController < ApplicationController
 
   def create
     @horse = Horse.new(horse_params)
+    @horse.user = current_user
     if @horse.save
       redirect_to horse_path(@horse)
     else
@@ -33,7 +34,7 @@ class HorsesController < ApplicationController
 
   def destroy
     @horse.destroy
-    redirect_to root, notice: 'Deleted succesfully'
+    redirect_to root_path, notice: 'Deleted succesfully'
   end
 
   private
@@ -43,6 +44,6 @@ class HorsesController < ApplicationController
   end
 
   def horse_params
-    params.require(:horse).permit(:name, :age, :description, :breed, :price, :location, :user_id, :photo)
+    params.require(:horse).permit(:name, :age, :description, :breed, :price, :location, :photo)
   end
 end
