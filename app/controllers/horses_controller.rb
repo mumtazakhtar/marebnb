@@ -1,4 +1,5 @@
 class HorsesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index home show]
   before_action :set_horse_id, only: %i[show edit update destroy]
   def index
     @horses = Horse.all
@@ -34,7 +35,7 @@ class HorsesController < ApplicationController
 
   def destroy
     @horse.destroy
-    redirect_to root, notice: 'Deleted succesfully'
+    redirect_to root_path, notice: 'Deleted succesfully'
   end
 
   private
@@ -44,6 +45,6 @@ class HorsesController < ApplicationController
   end
 
   def horse_params
-    params.require(:horse).permit(:name, :age, :description, :breed, :price, :location, :user_id, :photo)
+    params.require(:horse).permit(:name, :age, :description, :breed, :price, :location, :photo)
   end
 end
