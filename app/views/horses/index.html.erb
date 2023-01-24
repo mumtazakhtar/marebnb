@@ -1,11 +1,137 @@
-<h1>Welcome to Marebnb</h1>
-
+<div class="cards-container">
+<div class="cards">
 <ul>
-  <%= @horses.each do |horse|%>
-    <li><%=link_to horse.name, horse_path(horse) %></li>
-    <li><%= horse.age %></li>
-    <li><%= horse.breed %></li>
-    <li><%= horse.price %></li>
-    <li><%= horse.description %></li>
+  <% @horses.each do |horse|%>
+    <div class="card-horse">
+    <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+    <div class="card-horse-infos">
+      <div>
+        <h2>Name here</h2>
+        <li><%=link_to horse.name, horse_path(horse) %></li>
+        <li><%= horse.age %></li>
+        <li><%= horse.breed %></li>
+        <li><%= horse.price %></li>
+        <li><%= horse.description %></li>
+        <p>Short description here!</p>
+      </div>
+    </div>
+  </div>
   <% end %>
 </ul>
+</div>
+</div>
+
+<div class="cards-container">
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+   <div class="card-horse">
+    <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+    <div class="card-horse-infos">
+      <div>
+        <h2>Name here</h2>
+        <p>Short description here!</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-horse">
+      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai" />
+      <div class="card-horse-infos">
+        <div>
+          <h2>Name here</h2>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <h5>Follow us at our social media channels</h5>
+  </div>
+</div>
