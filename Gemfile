@@ -6,6 +6,9 @@ ruby "3.1.2"
 # Cloudinary
 gem "cloudinary"
 
+# Faker for creating seeds
+gem "faker"
+
 # Devise for login system
 gem "devise"
 
