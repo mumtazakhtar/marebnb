@@ -1,2 +1,10 @@
 <h1>Index page of Bookings / Dashboard</h1>
 <p>This page is for now only here to confirm the routing & controller settings</p>
+
+<ul>
+  <%= @bookings.each do |booking| %>
+    <li><%= booking.horse.name %></li>
+    From <%= booking.from_date %> <BR>
+    To <%= booking.to_date %>
+  <% end %>
+</ul>
