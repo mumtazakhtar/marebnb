@@ -14,7 +14,7 @@ class HorsesController < ApplicationController
   def create
     @horse = Horse.new(horse_params)
     if @horse.save
-      redirect_to horse_path
+      redirect_to horse_path(@horse)
     else
       render :new, status: :unprocessable_entity
     end
@@ -43,6 +43,6 @@ class HorsesController < ApplicationController
   end
 
   def horse_params
-    params.require(:horse).permit(:name, :age, :description, :breed, :price, :location)
+    params.require(:horse).permit(:name, :age, :description, :breed, :price, :location, :user_id, :photo)
   end
 end
