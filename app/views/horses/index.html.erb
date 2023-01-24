@@ -1,6 +1,6 @@
 <div class="cards-container">
   <div class="cards">
-  <% @horses[0..9].each do |horse|%>
+  <% @horses[0...9].each do |horse|%>
     <div class="card-horse">
     <%= cl_image_tag horse.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-horse-infos">
