@@ -14,10 +14,14 @@ require 'faker'
 # Check if it is good practice to destroy_all in the seeds file?
 puts 'First cleaning the database...'
 Horse.destroy_all
+User.destroy_all
 puts 'Done!'
 
-puts 'Creating new horses'
+puts 'Creating two users'
+User.create(first_name: 'Mumtaz', last_name: 'mohammed', email: 'reallymyemail@mail.com', password: 'fakepassword')
+User.create(first_name: 'Nikki', last_name: 'kerpstra', email: 'alsomytruemail@mail.com', password: 'fakepassword')
 
+puts 'Creating new horses and assigning to users'
 10.times do
   Horse.create(
     name: Faker::Name.name_with_middle,
@@ -26,7 +30,7 @@ puts 'Creating new horses'
     location: "Netherlands",
     description: "What an amazing horse this is. Very horsey.",
     price: rand(75...199),
-    user_id: 1
+    user: User.all.sample
   )
 end
 
