@@ -1,10 +1,15 @@
-<h1>Index page of Bookings / Dashboard</h1>
-<p>This page is for now only here to confirm the routing & controller settings</p>
+<h1>Your bookings</h1>
+<p></p>
 
 <ul>
   <%= @bookings.each do |booking| %>
-    <li><%= booking.horse.name %></li>
+    <li><strong><%= booking.horse.name %></strong></li>
+    <li><strong>Days:</strong> <%= (days = booking.to_date - booking.from_date).to_i %></li>
+    <li><strong>Total price:</strong> <%= (days * booking.horse.price) %></li>
+    <%# This is just for testing,
+    maybe calculations should be in a controller method? %>
     From <%= booking.from_date %> <BR>
-    To <%= booking.to_date %>
+    To <%= booking.to_date %> <BR>
+    <li><strong>Status:</strong> <%= booking.status %><BR><BR>
   <% end %>
 </ul>

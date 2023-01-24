@@ -36,6 +36,10 @@ class BookingsController < ApplicationController
 
   private
 
+  def calculate_price
+    @days = endDate - beginDate
+  end
+
   def set_horse
     @horse = Horse.find(params[:horse_id])
   end
