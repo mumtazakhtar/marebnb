@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 body {
   margin: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: sans-serif;
   font-size: 18px;
   background: #F4F4F4;
 }
@@ -9,7 +9,7 @@ p {
   font-weight: lighter;
 }
 h1, h2 {
-  font-family: 'Varela Round', sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
 }
 h1 {
@@ -20,15 +20,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-.cards-container .cards {
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-grow: 1;
   padding: 14px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+  grid-gap: 16px;
+  max-width: 100px;
 }
 
 .card-horse .card-horse-infos {
@@ -37,11 +35,15 @@ h2 {
   height: 150px;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-around;
   font-size: 22px;
   color: white;
   font-weight: bolder;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.footer, svg {
+  text-align: center;
 }
