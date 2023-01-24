@@ -21,12 +21,15 @@ h2 {
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   flex-grow: 1;
   padding: 14px;
-  grid-gap: 16px;
-  max-width: 100px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    max-width: 100px;
 }
 
 .card-horse .card-horse-infos {
