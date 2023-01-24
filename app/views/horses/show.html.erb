@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="card-horse">
       <h2><%= @horse.name %></h2>
-      <img src="http://kitt.lewagon.com/placeholder/cities/shanghai"/>
+      <%= cl_image_tag @horse.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
     <div class="wrap">
       <div>
