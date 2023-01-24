@@ -24,7 +24,7 @@ class HorsesController < ApplicationController
   end
 
   def update
-    if Horse.update(horse_params)
+    if @horse.update(horse_params)
       redirect_to horse_path, notice: 'Updated Succesfully'
     else
       render :edit, status: unprocessable_entity
