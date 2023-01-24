@@ -1,0 +1,11 @@
+<h1>Edit horse information</h1>
+<h2><%= @horse.name %></h2>
+
+<p>Fill out the form to update your horse's information.
+Maybe later also insert the (small/medium) card of the horse here?
+For an overview / confirmation or simply because it looks nice?</p>
+
+<%= render 'form', horse: @horse %>
+
+<%= link_to "Back to #{@horse.name}'s profile", @horse %> <BR><BR>
+<%= link_to "Back to all horses", horses_path %>
