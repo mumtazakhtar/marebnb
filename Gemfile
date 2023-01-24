@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# Faker for creating seeds
+gem "faker"
+
 # Devise for login system
 gem "devise"
 
