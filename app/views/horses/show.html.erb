@@ -6,19 +6,20 @@
     </div>
     <div class="wrap">
       <div>
-        <p><b>Name :</b><%= @horse.name%>
-        <p><b>Breed :</b><%= @horse.breed %></p>
-        <p><b>Location:</b><%= @horse.location %></p>
-        <p><b>Price:</b><%= @horse.price %></p>
+        <p>Name : <%= @horse.name %>
+        <p>Age : <%= @horse.age %>
+        <p>Breed : <%= @horse.breed %></p>
+        <p>Location : <%= @horse.location %></p>
       </div>
     </div>
   </div>
   <div class="wrapper">
     <div class="description">
       <h2>Description</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<%= @horse.description %></p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry <br/><%= @horse.description %></p>
     </div>
     <div>
+      <p><b></b><%= @horse.price %>€</p>
       <p><%= button_to 'Request a booking' %></p>
     </div>
   </div>
