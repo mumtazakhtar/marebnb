@@ -35,6 +35,11 @@ h2 {
   display: flex;
 }
 
+img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -53,7 +58,8 @@ h2 {
   background-size: cover;
   background-position: center;
   height: 150px;
-  border-radius: 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   align-items: center;
   display: grid;
@@ -64,7 +70,6 @@ h2 {
   color: white;
   font-weight: bolder;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  border-radius: 5px;
 }
 
 .info {

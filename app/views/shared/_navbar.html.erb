@@ -1,8 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-horse">
+<div class="navbar navbar-expand-sm navbar-light navbar-horse sticky">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "horse_logo.jpg", height: 50 %>
-    <% end %>
+    <div class="container-logo">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "horse_logo.jpg", height: 50 %>
+      <% end %>
+      <h3>Marebnb</h3>
+    </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,10 +23,12 @@
   </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <%= link_to "Marebnb your horse", new_horse_path %>
-      <% if current_user %>
-      <p>Hello  <%= current_user.first_name %>!</p>
-      <% end %>
+      <div class="name-card">
+        <%= link_to "Marebnb your horse", new_horse_path, id: "mare-bnb" %>
+        <% if current_user %>
+        <p>Hello  <%= current_user.first_name %>!</p>
+        <% end %>
+      </div>
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
             <%= link_to "Home", root_path, class: "nav-link" %>

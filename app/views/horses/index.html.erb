@@ -1,6 +1,6 @@
 <div class="cards-container">
   <div class="cards">
-  <% @horses.each do |horse|%>
+  <% @horses[0...9].each do |horse|%>
     <div class="card-horse">
       <% if horse.photo.key %>
       <%= cl_image_tag horse.photo.key, height: 300, width: 400, crop: :fill %>
@@ -12,8 +12,6 @@
         <p>Breed: <%= horse.breed %></p>
         <p>Price: <%= horse.price %></p>
       </div>
-        <%# <p>For a full description, click in the link!</p> %>
-        <%# <%= horse.description %>
     </div>
   </div>
   <% end %>
