@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-horse">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "horse_logo.jpg", height: 50 %>
     <% end %>
 
@@ -20,17 +20,23 @@
   </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <%= link_to "Marebnb your horse", new_horse_path %>
+      <% if current_user %>
+      <p>Hello  <%= current_user.first_name %>!</p>
+      <% end %>
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "sign-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Signup", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+              <% if current_user %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete},
               class: "dropdown-item" %>
+              <% end %>
             </div>
           </li>
       </ul>
