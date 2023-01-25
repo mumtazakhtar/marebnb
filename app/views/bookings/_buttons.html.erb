@@ -1,0 +1,14 @@
+<% if booking.status == "pending" %>
+  <% if booking.horse.user == current_user %>
+    <%= link_to 'Confirm Booking', booking_path(booking, "booking[status]": "accepted"), data: {turbo_method: :patch}, class: "btn btn-sm btn-outline-success mt-3 " %>
+    <%= link_to 'Decline Booking', root_path,  class: "btn btn-sm btn-outline-danger mt-3" %>
+    <div class="alert alert-danger" role="alert">
+      You still have bookings to confirm!
+    </div>
+    <% else %>
+      <HR>
+     <p>Waiting for the owner of <%= booking.horse.name %> te confirm your booking.</p>
+    <% end %>
+<% else %>
+  <%= link_to 'Edit Booking', root_path,  class: "btn btn-outline-dark mt-3" %>
+<% end %>
