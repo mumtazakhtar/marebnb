@@ -4,7 +4,7 @@
     <div class="card-horse">
       <h2><%= @horse.name %></h2>
       <% if @horse.photo.key %>
-      <%= cl_image_tag @horse.photo.key, height: 500, width: 600, crop: :fill %>
+      <%= cl_image_tag @horse.photo.key, height: 350, width: 400, crop: :fill %>
       <% end %>
     </div>
     <div class="wrap">
@@ -33,9 +33,5 @@
       <%= link_to 'Delete', horse_path(@horse), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"}, class:"btn-show" %>
     <% end %>
   </div>
-
- <div>
-   <%= link_to 'Back to home', root_path,  class: "btn-show"%>
- </div>
 
 </div>
