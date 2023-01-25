@@ -46,6 +46,7 @@ h2 {
 
 .card-horse {
   width: 400px;
+
 }
 
 .card-horse .card-horse-infos {
@@ -55,7 +56,8 @@ h2 {
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   padding-left: 10px;
   justify-content: space-around;
   font-size: 20px;
@@ -69,7 +71,7 @@ h2 {
   font-size: 15px;
   padding-bottom: 0px;
   padding-top: 5px;
-  margin-left: 5px
+  margin-left: 5px;
 }
 
 .footer, svg {
