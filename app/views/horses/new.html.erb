@@ -1,9 +1,12 @@
 <div class="container m-5">
-<h1>Put your horse on Marebnb</h1>
-<p>Please fill in all the details of your horse:</p>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6 border">
+      <h1>Put your horse on Marebnb</h1>
+      <p>Please fill in all the details of your horse:</p>
 
-<%= render 'form', horse: @horse %>
+      <%= render 'form', horse: @horse %>
 
-<%= link_to "Cancel adding a horse to Marebnb", horses_path %>
-
+      <%= link_to "Cancel adding a horse to Marebnb", horses_path, class: "btn btn-show" %>
+    </div>
+  </div>
 </div>
