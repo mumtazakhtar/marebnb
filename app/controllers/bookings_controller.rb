@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  # Also set authenticate_user to require login! TODO!
   before_action :set_horse, only: %i[new create]
   before_action :set_booking, only: %i[edit update]
 
@@ -12,13 +13,11 @@ class BookingsController < ApplicationController
 
   def create
     @bookings = Booking.new(booking_params)
+    @bookings.user = current_user
     @bookings.horse = @horse
 
     if @bookings.save
-      # TO REDIRECT BACK TO THE BOOKED HORSE
-      redirect_to horse_path(@horse)
-      # OR TO REDIRECT BACK TO THE BOOKING DASHBOARD?
-      # redirect_to bookings_path
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,6 +36,10 @@ class BookingsController < ApplicationController
 
   private
 
+  def calculate_price
+    @days = endDate - beginDate
+  end
+
   def set_horse
     @horse = Horse.find(params[:horse_id])
   end
@@ -46,6 +49,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:status, :date_from, :date_to, :user_id, :horse_id)
+    params.require(:booking).permit(:status, :from_date, :to_date, :user_id, :horse_id)
   end
 end
