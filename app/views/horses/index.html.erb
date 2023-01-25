@@ -1,14 +1,14 @@
 <div class="cards-container">
   <div class="cards">
-  <% @horses[0...9].each do |horse|%>
+  <% @horses.each do |horse|%>
     <div class="card-horse">
     <%= cl_image_tag horse.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-horse-infos">
       <h2><%=link_to horse.name, horse_path(horse) %></h2>
-      <div>
-        <p class="info">Age: <%= horse.age %></p>
-        <p class="info">Breed: <%= horse.breed %></p>
-        <p class="info">Price: <%= horse.price %></p>
+      <div class="info">
+        <p>Age: <%= horse.age %></p>
+        <p>Breed: <%= horse.breed %></p>
+        <p>Price: <%= horse.price %></p>
       </div>
         <%# <p>For a full description, click in the link!</p> %>
         <%# <%= horse.description %>
