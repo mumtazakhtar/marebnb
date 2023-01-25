@@ -4,7 +4,7 @@
     <div class="card-horse">
       <h2><%= @horse.name %></h2>
       <% if @horse.photo.key %>
-      <%= cl_image_tag @horse.photo.key, height: 350, width: 400, crop: :fill %>
+      <%= cl_image_tag @horse.photo.key, height: 350, width: 400, crop: :fit %>
       <% end %>
     </div>
     <div class="wrap">
