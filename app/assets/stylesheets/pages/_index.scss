@@ -34,9 +34,15 @@ h2 {
   text-decoration: none;
 }
 
-.cards-container{
+.cards-container {
   display: flex;
 }
+
+.cards-container #map {
+  position: sticky;
+  height: 100vh;
+}
+
 
 img {
   border-top-left-radius: 4px;
@@ -45,12 +51,22 @@ img {
 
 .cards-ind {
   display: grid;
+  grid-template-columns: 2fr 1fr;
+  flex-grow: 1;
+  padding: 14px;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.cards-overall {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   flex-grow: 1;
   padding: 14px;
   column-gap: 10px;
   row-gap: 15px;
 }
+
 
 .card-horse {
   width: 400px;
