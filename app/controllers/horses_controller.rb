@@ -2,7 +2,7 @@ class HorsesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index home show]
   before_action :set_horse_id, only: %i[show edit update destroy]
   def index
-    @horses = Horse.all
+    @horses = Horse.order(created_at: :desc)
   end
 
   def show

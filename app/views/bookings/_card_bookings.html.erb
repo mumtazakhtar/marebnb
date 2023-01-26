@@ -1,0 +1,16 @@
+
+    <div class="card-booking">
+      <%# <%= link_to cl_image_tag(booking.horse.photo.key), booking.horse, class: "image" %>
+      <%= cl_image_tag(booking.horse.photo.key) %>
+      <div class="card-booking-infos">
+        <h2><%= booking.horse.name %></h2>
+        <p>
+          <strong>Booked from:</strong> <%= booking.from_date %><BR>
+          <strong>Booked to:</strong> <%= booking.to_date %>
+        </p>
+        <p>
+          <strong>Total price:</strong> €<%= booking.price %> for <%= booking.days %> day<%= "s" if booking.days > 1 %><BR>
+          <strong>Status</strong>: <%= booking.symbol %> <%= booking.status.capitalize %> </p>
+            <%= render 'buttons', booking: booking %>
+      </div>
+  </div>

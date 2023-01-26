@@ -1,15 +1,23 @@
-<h1>Your bookings</h1>
-<p></p>
+<%# Dashboard ideas: show bookings fist, then show horses when current user is owner %>
 
-<ul>
-  <%= @bookings.each do |booking| %>
-    <li><strong><%= booking.horse.name %></strong></li>
-    <li><strong>Days:</strong> <%= (days = booking.to_date - booking.from_date).to_i %></li>
-    <li><strong>Total price:</strong> <%= (days * booking.horse.price) %></li>
-    <%# This is just for testing,
-    maybe calculations should be in a controller method? %>
-    From <%= booking.from_date %> <BR>
-    To <%= booking.to_date %> <BR>
-    <li><strong>Status:</strong> <%= booking.status %><BR><BR>
-  <% end %>
-</ul>
+<div class="container mt-3">
+  <h1>Bookings</h1>
+  <p>
+  Here you can find an overview of your bookings.
+  Click on the horse's photo to visit their profile. <BR><BR>
+  Can you image how excited the horse is for their stay? We're sure they simply can't wait!
+  This is why it is unfortunately not possible to cancel your booking after confirmation.
+  We don't wanna dissapoint the horses, do we?
+  However, after a booking is confirmed,
+  you can still change the dates through the edit button that will now appear at the bottom of your booking. <BR><BR>
+
+  </p>
+  <div class="wrapper">
+    <div class="cards-booking">
+      <% @bookings.each do |booking| %>
+        <%= render 'card_bookings', booking: booking %>
+        <% end %>
+    </div>
+ </div>
+
+</div>
