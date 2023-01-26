@@ -1,7 +1,9 @@
+
 .wrapper {
   margin-top: 24px;
-  display: flex;
+  display: grid;
   justify-content: space-between;
+  margin-right: 10px;
 
   // h2 {
   //   text-align: center;
@@ -10,23 +12,38 @@
   img {
     width: 600px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 4px;
   }
 }
 
-.wrap {
-  margin-top: 50px;
-  margin-left:300px;
-}
+// .wrap {
+//   margin-top: 50px;
+//   margin-left:300px;
+// }
+
 #price-card{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 24px;
   margin-top: 50px;
-  margin-bottom: 96px;
+  margin-bottom: 100px;
+  margin-left: 250px;
+  border-radius: 4px;
+}
+
+#booking-card{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 24px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-radius: 4px;
+  margin-left: 50px;
 }
 .request-button {
   margin-top: 96px;
   margin-left: 16px;
+  font-size: auto;
 }
+
 .edit {
   margin-left: 80px;
 }
@@ -44,3 +61,45 @@
 .description {
   margin-top: 12px;
 }
+
+
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .wrapper {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .wrapper {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .wrapper {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     justify-content: space-between;
+//   }
+
+//   #price-card, #booking-card {
+//     margin-bottom: 100px;
+//   }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .wrapper {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .wrapper {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }

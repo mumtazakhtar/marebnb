@@ -7,24 +7,26 @@
         <%= cl_image_tag @horse.photo.key, height: 350, width: 400, crop: :fit %>
         <% end %>
       </div>
-      
+
       <div class="description">
         <h2>About <%= @horse.name %> :</h2>
         <p><%= @horse.description %></p>
       </div>
     </div>
-
     <div id="price-card">
       <h2>Details</h2>
       <p>Name : <%= @horse.name %>
       <p>Age : <%= @horse.age %>
       <p>Breed : <%= @horse.breed %></p>
       <p>Location : <%= @horse.location %></p>
+    </div>
+
+    <div id="booking-card">
+      <h2>Booking</h2>
       <p>€<%= @horse.price %> per day</p>
       <div class="request-button">
         <%= link_to 'Request a booking', root_path,  class: "btn-show"%>
       </div>
-    </div>
   </div>
 </div>
 
