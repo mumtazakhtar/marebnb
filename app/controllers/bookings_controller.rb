@@ -31,10 +31,12 @@ class BookingsController < ApplicationController
     # if params[:booking]
 
     if @booking.update(booking_params)
+      @booking.update(status: "pending") unless params[:booking][:status]
       redirect_to bookings_path, notice: 'Succesful update'
     else
-      render :edit, status: unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
+
   end
 
   private

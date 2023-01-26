@@ -1,16 +1,23 @@
-<% if booking.status == "pending" %>
-  <% if booking.horse.user == current_user %>
+<% if booking.horse.user == current_user %>
+  <% case booking.status %>
+  <% when 'pending' %>
     <%= link_to 'Confirm Booking', booking_path(booking, "booking[status]": "accepted"), data: {turbo_method: :patch}, class: "btn btn-sm btn-outline-success mt-3 " %>
-    <%= link_to 'Decline Booking', root_path,  class: "btn btn-sm btn-outline-danger mt-3" %>
+    <%= link_to 'Decline Booking', booking_path(booking, "booking[status]": "declined"), data: {turbo_method: :patch},  class: "btn btn-sm btn-outline-danger mt-3" %>
     <div class="alert alert-danger" role="alert">
       You still have bookings to confirm!
     </div>
-    <% else %>
-      <HR>
-     <p>Waiting for the owner te confirm your booking.</p>
-    <% end %>
-  <%# <%= elsif booking.status == "declined" %>
-    <%# <HR><p>This booking was declined.</p> %>
-  <% else %>
-    <%= link_to 'Edit Booking', root_path,  class: "btn btn-outline-dark mt-3" %>
+  <% when 'accepted' %>
+    <%= link_to 'Edit Booking', edit_booking_path(booking),  class: "btn-nrm" %>
+  <% when 'declined' %>
+    <p>You declined this request. <%= link_to 'Suggest another date.', edit_booking_path(booking) %></p>
+  <% end %>
+<% else %>
+  <% case booking.status %>
+  <% when 'pending' %>
+    <HR><p>Waiting for the owner to confirm your booking.</p>
+  <% when 'accepted' %>
+    <%= link_to 'Edit Booking', edit_booking_path(booking),  class: "btn-nrm" %>
+  <% when 'declined' %>
+    <p>The owner declined your booking! <%= link_to 'Try another date.', edit_booking_path(booking) %></p>
+  <% end %>
 <% end %>
