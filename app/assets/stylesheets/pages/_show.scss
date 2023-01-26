@@ -1,17 +1,18 @@
 .wrapper {
   margin-top: 24px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  h2 {
-    text-align: center;
-  }
+  // h2 {
+  //   text-align: center;
+  // }
 
   img {
     width: 600px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 }
+
 .wrap {
   margin-top: 50px;
   margin-left:300px;
@@ -19,6 +20,12 @@
 #price-card{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 24px;
+  margin-top: 50px;
+  margin-bottom: 96px;
+}
+.request-button {
+  margin-top: 96px;
+  margin-left: 16px;
 }
 .edit {
   margin-left: 80px;
@@ -33,4 +40,7 @@
   transition: opacity 0.3s ease;
   text-decoration: none;
   margin-bottom: 8px;
+}
+.description {
+  margin-top: 12px;
 }
