@@ -5,8 +5,8 @@
       <div class="card-booking-infos">
         <h2><%= booking.horse.name %></h2>
         <p>
-          <strong>Booked from:</strong> <%= booking.from_date %><BR>
-          <strong>Booked to:</strong> <%= booking.to_date %>
+          <strong>Booked from:</strong> <%= booking.from_date.strftime("%d/%m/%Y") %><BR>
+          <strong>Booked to:</strong> <%= booking.to_date.strftime("%d/%m/%Y") %>
         </p>
         <p>
           <strong>Total price:</strong> €<%= booking.price %> for <%= booking.days %> day<%= "s" if booking.days > 1 %><BR>

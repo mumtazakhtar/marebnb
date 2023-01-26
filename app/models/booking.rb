@@ -16,10 +16,13 @@ class Booking < ApplicationRecord
   end
 
   def symbol
-    if status == "pending"
-      return "<i class='fa-solid fa-ban'></i>"
-    elsif status == "accepted"
-      return "<i class='fa-regular fa-square-check'></i>"
+    case status
+    when 'pending'
+      "<i class='fa-regular fa-circle-question'></i>".html_safe
+    when 'accepted'
+      "<i class='fa-regular fa-square-check'></i>".html_safe
+    when 'declined'
+      "<i class='fa-regular fa-circle-xmark'></i>".html_safe
     end
   end
 end
