@@ -2,6 +2,18 @@ class Booking < ApplicationRecord
   belongs_to :horse
   belongs_to :user
 
+  validate :date_restrictions
+
+  def date_restrictions
+    if from_date.present? && from_date < Date.today
+      errors.add(:from_date, "can't be in the past")
+    elsif to_date.present? && to_date < Date.today
+      errors.add(:to_date, "can't be in the past")
+    elsif to_date < from_date
+      errors.add(:to_date, "can't be earlier than the from date")
+    end
+  end
+
   def initalize(days, price, symbol)
   end
 
