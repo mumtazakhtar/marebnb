@@ -2,13 +2,22 @@
 
 <div class="container mt-3">
   <h1>Bookings</h1>
-  <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <p>
+  Here you can find an overview of your bookings.
+  Click on the horse's photo to visit their profile. <BR><BR>
+  Can you image how excited the horse is for their stay? We're sure they simply can't wait!
+  This is why it is unfortunately not possible to cancel your booking after confirmation.
+  We don't wanna dissapoint the horses, do we?
+  However, after a booking is confirmed,
+  you can still change the dates through the edit button that will now appear at the bottom of your booking. <BR><BR>
 
-<div class="wrapper">
-<div class="cards">
-  <% @bookings.each do |booking| %>
-    <%= render 'card_bookings', booking: booking %>
-    <% end %>
+  </p>
+  <div class="wrapper">
+    <div class="cards-booking">
+      <% @bookings.each do |booking| %>
+        <%= render 'card_bookings', booking: booking %>
+        <% end %>
     </div>
-    </div>
+ </div>
+
 </div>

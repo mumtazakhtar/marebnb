@@ -7,8 +7,10 @@
     </div>
     <% else %>
       <HR>
-     <p>Waiting for the owner of <%= booking.horse.name %> te confirm your booking.</p>
+     <p>Waiting for the owner te confirm your booking.</p>
     <% end %>
-<% else %>
-  <%= link_to 'Edit Booking', root_path,  class: "btn btn-outline-dark mt-3" %>
+  <%# <%= elsif booking.status == "declined" %>
+    <%# <HR><p>This booking was declined.</p> %>
+  <% else %>
+    <%= link_to 'Edit Booking', root_path,  class: "btn btn-outline-dark mt-3" %>
 <% end %>

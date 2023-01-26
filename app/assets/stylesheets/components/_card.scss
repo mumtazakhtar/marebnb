@@ -1,12 +1,12 @@
 // CSS FOR THE BOOKING DASHBOARD CARDS
-.cards {
+.cards-booking {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 15px;
   flex-grow: 1;
   padding: 1em;
-  /* justify-content: space-evenly; */
-  /* border: 2x solid red; */
+  justify-content: space-between;
+  // border: 2x solid red;
 }
 
 .card-booking {
@@ -35,10 +35,14 @@
 .card-booking p {
   font-size: 13px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: .9;
   margin-bottom: 0;
   margin-top: 8px;
 }
+
+strong{
+  font-weight:bold;
+ }
 
 // .card-booking .image {
 //   padding: 0px;
@@ -51,5 +55,5 @@
 
 .wrapper{
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
 }
