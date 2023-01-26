@@ -3,6 +3,14 @@ class HorsesController < ApplicationController
   before_action :set_horse_id, only: %i[show edit update destroy]
   def index
     @horses = Horse.order(created_at: :desc)
+    @markers = @horses.geocoded.map do |horse|
+      {
+        lat: horse.latitude,
+        lng: horse.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { horse: horse }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
   end
 
   def show
