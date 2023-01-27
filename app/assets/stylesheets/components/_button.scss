@@ -11,19 +11,20 @@
 
 .btn-call {
   border: rgb(156, 48, 48);
-  padding: 8px;
+  padding: 8px 24px;
   background-color: rgb(156, 48, 48);
   color: #fff;
   border-radius: 25px;
   text-decoration: none;
+  margin-bottom: 8px;
 }
 
-btn-call:hover {
+.btn-call:hover {
   color: #000;
   transition: opacity 0.3s ease;
 }
 
-btn-nrm {
+.btn-nrm {
   color: #4c4b4c;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
@@ -34,7 +35,8 @@ btn-nrm {
   text-decoration: none;
 }
 
-btn-nrm:hover {
+.btn-nrm:hover {
   color: rgb(156, 48, 48);
   transition: 0.3s ease;
+  border: 1px solid rgb(156, 48, 48);
 }
