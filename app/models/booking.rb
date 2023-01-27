@@ -19,7 +19,7 @@ class Booking < ApplicationRecord
 
   def days
     days = to_date - from_date
-    return days.to_i
+    return 1 + days.to_i
   end
 
   def price
