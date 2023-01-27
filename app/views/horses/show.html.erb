@@ -1,10 +1,10 @@
-<div class="container-show">
+<div class="container mt-3">
   <div class="show-wrapper">
     <div>
-      <div class="card-horse-home">
+      <div class="card-horse-show">
         <h2><%= @horse.name %></h2>
         <% if @horse.photo.key %>
-        <%= cl_image_tag @horse.photo.key %>
+        <%= cl_image_tag @horse.photo.key, class:"img-fluid" %>
         <% end %>
       </div>
       <div class="description">
@@ -23,9 +23,7 @@
     <div id="booking-card">
       <h2>Booking</h2>
       <p>€<%= @horse.price.to_i %> per day</p>
-      <div class="btn-pg-show">
-        <%= link_to 'Request a booking', root_path,  class: "btn-call"%>
-      </div>
+      <%= render 'bookings/form', booking: @booking %>
        </form>
     </div>
   </div>
