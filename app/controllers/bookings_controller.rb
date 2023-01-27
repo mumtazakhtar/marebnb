@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[edit update]
 
   def index
-    @bookings = current_user.bookings
+    @bookings = current_user.bookings + current_user.received_bookings
   end
 
   def new
