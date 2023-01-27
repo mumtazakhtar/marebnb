@@ -1,17 +1,17 @@
 <%# Dashboard ideas: show bookings fist, then show horses when current user is owner %>
 
 <div class="container mt-3">
-  <h1>Bookings</h1>
+  <%= render 'horse_owner' if current_user.horses.count >= 1 %>
+  <%= render 'horse_user' if current_user.horses.count < 1 %>
+
   <p>
-  Here you can find an overview of your bookings.
-  Click on the horse's photo to visit their profile. <BR><BR>
-  Can you image how excited the horse is for their stay? We're sure they simply can't wait!
-  This is why it is unfortunately not possible to cancel your booking after confirmation.
+  <strong>Cancellation policy</strong> || Can you image how excited the horse is for their stay? We're sure they simply can't wait!
+  This is why it unfortunately is not possible to cancel your booking after confirmation.
   We don't wanna dissapoint the horses, do we?
   However, after a booking is confirmed,
-  you can still change the dates through the edit button that will now appear at the bottom of your booking. <BR><BR>
+  you can still change the dates through the edit button that will now appear at the bottom of your booking.</p>
 
-  </p>
+
   <div class="wrapper">
     <div class="cards-booking">
       <% @bookings.each do |booking| %>
@@ -20,4 +20,5 @@
     </div>
  </div>
 
+  <%= render 'horses' if current_user.horses.count >= 1 %>
 </div>

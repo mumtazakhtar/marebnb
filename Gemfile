@@ -12,6 +12,8 @@ gem "faker"
 # Devise for login system
 gem "devise"
 
+gem "geocoder"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 
@@ -36,6 +38,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# for searching in the db
+gem 'pg_search'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
