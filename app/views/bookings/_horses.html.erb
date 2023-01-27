@@ -1,4 +1,4 @@
-<h2>Your horses</h2>
+<h3>Your horses</h3>
 <p>These are the horses you currently made available for rent on Marebnb.
 You can edit their profile to have their information up to date,
 or delete their profile if you wish to withdraw your horse from Marebnb.
@@ -9,16 +9,15 @@ or delete their profile if you wish to withdraw your horse from Marebnb.
           <div class="card-booking">
             <%= cl_image_tag(horse.photo.key) %>
             <div class="card-booking-infos">
-              <h2><%=link_to horse.name, horse_path(horse) %></h2>
+              <h3><%=link_to horse.name, horse_path(horse) %></h3>
               <p id="booking-horse">
               <i class="fa-solid fa-cake-candles"></i> <%= horse.age %> years old <BR>
               <i class="fa-solid fa-horse"></i> <%= horse.breed %> <BR>
               <i class="fa-solid fa-euro-sign"></i> <%= horse.price.to_i %> per day<BR>
               <i class="fa-solid fa-location-dot"></i> <%= horse.location %> <BR>
-              </p><div>
-              <p><%= link_to 'Edit information', edit_horse_path(horse),  class: "btn-nrm" %>
-              <%= link_to 'Delete', horse_path(horse), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{horse.name} their profile?"}, class:"btn-nrm" %>
-              </p></div>
+              </p>
+              <%= link_to 'Edit information', edit_horse_path(horse),  class: "btn-nrm-book" %>
+              <%= link_to 'Delete', horse_path(horse), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{horse.name} their profile?"}, class:"btn-nrm-book" %>
             </div>
         </div>
     <% end %>
