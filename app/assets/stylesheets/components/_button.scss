@@ -13,8 +13,14 @@
   border: rgb(156, 48, 48);
   padding: 8px;
   background-color: rgb(156, 48, 48);
-  color: white;
+  color: #fff;
   border-radius: 25px;
+  text-decoration: none;
+}
+
+btn-call:hover {
+  color: #000;
+  transition: opacity 0.3s ease;
 }
 
 btn-nrm {
@@ -30,5 +36,5 @@ btn-nrm {
 
 btn-nrm:hover {
   color: rgb(156, 48, 48);
-  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
 }
