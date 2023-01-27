@@ -21,6 +21,7 @@
  </div>
 
   <%= render 'horses' if current_user.horses.count >= 1 %>
+  <%= link_to "Find a horse near you", root_path, class: "btn btn-call" %>
 </div>
 
 
