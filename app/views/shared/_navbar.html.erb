@@ -17,7 +17,7 @@
     <%= form_with url: horses_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "btn-search",
+      class: "search-bar",
       placeholder: "  Breed  |  Location  |  Price"
       %>
       <%= submit_tag "Search", class: "btn-mare-bnb" %>
