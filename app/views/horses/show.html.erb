@@ -8,16 +8,16 @@
         <% end %>
       </div>
       <div class="description">
-        <h2>About <%= @horse.name %> :</h2>
+        <p>About <%= @horse.name %>:</p>
         <p><%= @horse.description %></p>
       </div>
     </div>
     <div id="price-card">
       <h2>Details</h2>
-      <p>Name : <%= @horse.name %>
-      <p>Age : <%= @horse.age %>
-      <p>Breed : <%= @horse.breed %></p>
-      <p>Location : <%= @horse.location %></p>
+      <p><%= @horse.name %>
+      <p><i class="fa-solid fa-cake-candles"></i> <%= @horse.age %>
+      <p><i class="fa-solid fa-horse"></i> <%= @horse.breed %></p>
+      <p><i class="fa-solid fa-location-dot"></i> <%= @horse.location %></p>
     </div>
 
     <div id="booking-card">
