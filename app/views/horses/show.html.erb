@@ -22,15 +22,6 @@
 
     <div id="booking-card">
       <h2>Booking</h2>
-      <form>
-      <label for="start">Start date:</label>
-      <input type="date" id="start" name="horse-start"
-       value="2023-01-27"
-       min="2023-01-01" max="2025-12-31">
-       <label for="end">Until date:</label>
-      <input type="date" id="end" name="horse-end"
-       value="2023-01-27"
-       min="2023-01-01" max="2025-12-31">
       <p>€<%= @horse.price %> per day</p>
       <div class="request-button">
         <%= link_to 'Request a booking', root_path,  class: "btn-show"%>
