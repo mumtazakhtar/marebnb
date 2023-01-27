@@ -4,7 +4,9 @@
       <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "horse_logo.jpg", height: 50 %>
       <% end %>
-      <h3>Marebnb</h3>
+      <%= link_to root_path do %>
+        <h3>Marebnb</h3>
+      <% end %>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,10 +17,10 @@
     <%= form_with url: horses_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control btn-show",
-      placeholder: "Breed,location,Price"
+      class: "btn-search",
+      placeholder: "  Breed  |  Location  |  Price"
       %>
-      <%= submit_tag "search", class: "btn-mare-bnb" %>
+      <%= submit_tag "Search", class: "btn-mare-bnb" %>
     <% end %>
   </div>
 
@@ -34,17 +36,18 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "menubar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <% if !current_user %>
-              <%= link_to "Signup", new_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
-              <% end %>
-              <% if current_user %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete},
-              class: "dropdown-item" %>
-              <% end %>
-            </div>
+            <% if current_user %>
+              <%= image_tag "sign-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div  class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete},class: "dropdown-item" %>
+              </div>
+            <% elsif !current_user %>
+              <%= image_tag "hamburger_icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Signup", new_user_registration_path, class: "dropdown-item" %>
+                <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+              </div>
+            <% end %>
           </li>
       </ul>
     </div>
