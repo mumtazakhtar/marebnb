@@ -50,7 +50,7 @@ horse3 = Horse.new(
   name: "Sir Edward III",
   age: 17,
   breed: "Oldenburger",
-  location: "Oude Zutphenseweg 3A, Klarenbeek",
+  location: "Edward Victor Appletonweg 17, Almere",
   description: "Surely a gentleman (or gentlehorse) with a name like this. Great horse. Much horsey.",
   price: 80,
   user: User.all.sample
@@ -60,7 +60,7 @@ horse4 = Horse.new(
   name: "Jimmy",
   age: 8,
   breed: "Irish Cob",
-  location: "Oudezijds Kolk 9, Amsterdam",
+  location: "Ierlandstraat 8, Bergen op Zoom",
   description: "A real Irish horse, would ye look at that? Take him with you to the pub and offer him a pint!",
   price: 99,
   user: User.all.sample
@@ -70,7 +70,7 @@ horse5 = Horse.new(
   name: "Maxilya",
   age: 12,
   breed: "Arabian Horse",
-  location: "St.-Lambertusstraat 73, Cromvoirt",
+  location: "Saharadreef 12, Utrecht",
   description: "Look at the little dots and freckles she has, what a cutie!",
   price: 65,
   user: User.all.sample
@@ -80,7 +80,7 @@ horse6 = Horse.new(
   name: "Dulcero XI",
   age: 6,
   breed: "Lusitano",
-  location: "DBurgemeester van Erpstraat 75, Berghem",
+  location: "Bergweg 6, Blaricum",
   description: "As you can see, this horse used to travel a lot - it went outside the Netherlands to jump around in the mountains!",
   price: 97,
   user: User.all.sample
@@ -90,7 +90,7 @@ horse7 = Horse.new(
   name: "Unicorn",
   age: 99,
   breed: "Magical Creature",
-  location: "Regenboogweg 15, Almere",
+  location: "Eenhoornsluis, Amsterdam",
   description: "You thought they didn't excist... but they do, and now you can even rent one!",
   price: 9999,
   user: User.all.sample
@@ -100,7 +100,7 @@ horse8 = Horse.new(
   name: "Novelle",
   age: 8,
   breed: "Arabian Friesian crossbred",
-  location: "Het Helmhout 19, Drachten",
+  location: "Bosweg 8, Hoogersmilde",
   description: "As you can see, she's quite a character! Only for experenced horse renters.",
   price: 112,
   user: User.all.sample
@@ -120,7 +120,7 @@ horse10 = Horse.new(
   name: "Shamrock",
   age: 13,
   breed: "Irish Cob",
-  location: "Smetiusstraat 17, Nijmegen",
+  location: "Paardenstraat 13, Vlissingen",
   description: "Instead of having to ride your bike through the snow, rent Jameson in wintertime!",
   price: 37,
   user: User.all.sample
@@ -130,7 +130,7 @@ horse11 = Horse.new(
   name: "Rainbow Dash",
   age: 1,
   breed: "My Little Pony",
-  location: "De Entree 240, Amsterdam",
+  location: "Regenboogweg 15, Almere",
   description: "If you are actually a bit afraid of horses, this is the rental for you!",
   price: 5,
   user: User.all.sample
