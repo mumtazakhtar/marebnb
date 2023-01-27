@@ -1,7 +1,7 @@
 
     <div class="card-booking">
-      <%# <%= link_to cl_image_tag(booking.horse.photo.key), booking.horse, class: "image" %>
-      <%= cl_image_tag(booking.horse.photo.key) %>
+      <%= link_to cl_image_tag(booking.horse.photo.key), booking.horse, class: "image" %>
+      <%# <%= cl_image_tag(booking.horse.photo.key) %>
       <div class="card-booking-infos">
         <h2><%= link_to booking.horse.name, horse_path(booking.horse) %></h2>
         <p>
