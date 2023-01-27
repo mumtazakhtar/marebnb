@@ -23,14 +23,15 @@
     <div id="booking-card">
       <h2>Booking</h2>
       <p>€<%= @horse.price %> per day</p>
-      <div class="request-button">
-        <%= link_to 'Request a booking', root_path,  class: "btn-show"%>
+      <div class="btn-pg-show">
+        <%= link_to 'Request a booking', root_path,  class: "btn-call"%>
       </div>
+       </form>
     </div>
   </div>
   <div class="edit">
     <% if @horse.user == current_user%>
-      <%= link_to 'Edit', edit_horse_path(@horse), class: "btn-show" %>
+      <%= link_to 'Edit', edit_horse_path(@horse), class: "btn-nrm" %>
       <%= link_to 'Delete', horse_path(@horse), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"}, class:"btn-show" %>
     <% end %>
   </div>

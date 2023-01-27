@@ -1,14 +1,14 @@
 class HorsesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index home show]
   before_action :set_horse_id, only: %i[show edit update destroy]
-  
+
   def index
     if params[:query].present?
       @horses = Horse.search_by_breed_and_location_and_price(params[:query])
     else
       @horses = Horse.order(created_at: :desc)
     end
-    
+
     @markers = @horses.geocoded.map do |horse|
       {
         lat: horse.latitude,
