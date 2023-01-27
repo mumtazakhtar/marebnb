@@ -15,9 +15,10 @@ or delete their profile if you wish to withdraw your horse from Marebnb.
               <i class="fa-solid fa-horse"></i> <%= horse.breed %> <BR>
               <i class="fa-solid fa-euro-sign"></i> <%= horse.price.to_i %> per day<BR>
               <i class="fa-solid fa-location-dot"></i> <%= horse.location %> <BR>
-              </p>
-              <%= link_to 'Edit information', edit_horse_path(horse),  class: "btn-nrm" %>
+              </p><div>
+              <p><%= link_to 'Edit information', edit_horse_path(horse),  class: "btn-nrm" %>
               <%= link_to 'Delete', horse_path(horse), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{horse.name} their profile?"}, class:"btn-nrm" %>
+              </p></div>
             </div>
         </div>
     <% end %>

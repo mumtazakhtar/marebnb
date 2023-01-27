@@ -26,6 +26,37 @@ User.create(first_name: 'Nikki', last_name: 'kerpstra', email: 'alsomytruemail@m
 
 puts 'Creating new horses and assigning to users'
 
+
+horse10 = Horse.new(
+  name: "Shamrock",
+  age: 13,
+  breed: "Irish Cob",
+  location: "Paardenstraat 13, Vlissingen",
+  description: "Instead of having to ride your bike through the snow, rent Jameson in wintertime!",
+  price: 37,
+  user: User.all.sample
+)
+
+horse11 = Horse.new(
+  name: "Rainbow Dash",
+  age: 1,
+  breed: "My Little Pony",
+  location: "Regenboogweg 15, Almere",
+  description: "If you are actually a bit afraid of horses, this is the rental for you!",
+  price: 5,
+  user: User.all.sample
+)
+
+horse12 = Horse.new(
+  name: "Isra Al",
+  age: 4,
+  breed: "Welsh Pony",
+  location: "Weidelaan 55, Lekkerkerk",
+  description: "Please return just as white and clean as she was delivered to you.",
+  price: 75,
+  user: User.all.sample
+)
+
 horse1 = Horse.new(
   name: "Mahlika",
   age: 13,
@@ -116,35 +147,17 @@ horse9 = Horse.new(
   user: User.all.sample
 )
 
-horse10 = Horse.new(
-  name: "Shamrock",
-  age: 13,
-  breed: "Irish Cob",
-  location: "Paardenstraat 13, Vlissingen",
-  description: "Instead of having to ride your bike through the snow, rent Jameson in wintertime!",
-  price: 37,
-  user: User.all.sample
-)
+photo = File.open(Rails.root.join('app/assets/images/10.jpg'))
+horse10.photo.attach(io: photo, filename: "#{horse10.name}.jpg", content_type: "image/jpg")
+horse10.save
 
-horse11 = Horse.new(
-  name: "Rainbow Dash",
-  age: 1,
-  breed: "My Little Pony",
-  location: "Regenboogweg 15, Almere",
-  description: "If you are actually a bit afraid of horses, this is the rental for you!",
-  price: 5,
-  user: User.all.sample
-)
+photo = File.open(Rails.root.join('app/assets/images/11.jpg'))
+horse11.photo.attach(io: photo, filename: "#{horse11.name}.jpg", content_type: "image/jpg")
+horse11.save
 
-horse12 = Horse.new(
-  name: "Isra Al",
-  age: 4,
-  breed: "Welsh Pony",
-  location: "Weidelaan 55, Lekkerkerk",
-  description: "Please return just as white and clean as she was delivered to you.",
-  price: 75,
-  user: User.all.sample
-)
+photo = File.open(Rails.root.join('app/assets/images/12.jpg'))
+horse12.photo.attach(io: photo, filename: "#{horse12.name}.jpg", content_type: "image/jpg")
+horse12.save
 
   photo = File.open(Rails.root.join('app/assets/images/1.jpg'))
   horse1.photo.attach(io: photo, filename: "#{horse1.name}.jpg", content_type: "image/jpg")
@@ -183,16 +196,5 @@ horse12 = Horse.new(
   horse9.photo.attach(io: photo, filename: "#{horse9.name}.jpg", content_type: "image/jpg")
   horse9.save
 
-  photo = File.open(Rails.root.join('app/assets/images/10.jpg'))
-  horse10.photo.attach(io: photo, filename: "#{horse10.name}.jpg", content_type: "image/jpg")
-  horse10.save
-
-  photo = File.open(Rails.root.join('app/assets/images/11.jpg'))
-  horse11.photo.attach(io: photo, filename: "#{horse11.name}.jpg", content_type: "image/jpg")
-  horse11.save
-
-  photo = File.open(Rails.root.join('app/assets/images/12.jpg'))
-  horse12.photo.attach(io: photo, filename: "#{horse12.name}.jpg", content_type: "image/jpg")
-  horse12.save
 
 puts 'Done. Just created 12 horses.'
