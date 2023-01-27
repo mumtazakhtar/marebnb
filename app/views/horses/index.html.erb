@@ -7,7 +7,7 @@
       <%= link_to cl_image_tag(horse.photo.key), horse_path(horse), height: 300, width: 400, crop: :fill %>
       <% end %>
     <div class="card-horse-infos">
-      <h2><%=link_to horse.name, horse_path(horse) %></h2>
+      <h3><%=link_to horse.name, horse_path(horse) %></h3>
       <div class="info">
         <p><i class="fa-solid fa-cake-candles"></i> <%= horse.age %></p>
         <p><i class="fa-solid fa-horse"></i> <%= horse.breed %></p>

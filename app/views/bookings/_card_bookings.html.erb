@@ -3,7 +3,7 @@
       <%= link_to cl_image_tag(booking.horse.photo.key), booking.horse, class: "image" %>
       <%# <%= cl_image_tag(booking.horse.photo.key) %>
       <div class="card-booking-infos">
-        <h2><%= link_to booking.horse.name, horse_path(booking.horse) %></h2>
+        <h3><%= link_to booking.horse.name, horse_path(booking.horse) %></h3>
         <p>
           <strong>Booked from:</strong> <%= booking.from_date.strftime("%d/%m/%Y") %><BR>
           <strong>Booked to:</strong> <%= booking.to_date.strftime("%d/%m/%Y") %>
