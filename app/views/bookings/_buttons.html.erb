@@ -7,7 +7,7 @@
       You still have bookings to confirm!
     </div>
   <% when 'accepted' %>
-    <%= link_to 'Edit Booking', edit_booking_path(booking),  class: "btn-nrm" %>
+    <%= link_to 'Edit Booking', edit_booking_path(booking),  class: "btn-nrm-book" %>
   <% when 'declined' %>
     <p>You declined this request. <%= link_to 'Suggest another date.', edit_booking_path(booking) %></p>
   <% end %>
@@ -16,7 +16,7 @@
   <% when 'pending' %>
     <HR><p>Waiting for the owner to confirm your booking.</p>
   <% when 'accepted' %>
-    <%= link_to 'Edit Booking', edit_booking_path(booking),  class: "btn-nrm" %>
+    <%= link_to 'Edit Booking', edit_booking_path(booking),  class: "btn-nrm-book" %>
   <% when 'declined' %>
     <p>The owner declined your booking! <%= link_to 'Try another date.', edit_booking_path(booking) %></p>
   <% end %>
