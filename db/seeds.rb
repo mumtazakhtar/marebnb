@@ -41,7 +41,7 @@ horse2 = Horse.new(
   age: 15,
   breed: "Oldenburger",
   location: "Weideweg 35, Elspeet",
-  description: "This is the perfect rent for if you want to take your horse on a swim!",
+  description: "Horsey horse. This is the perfect rent for if you want to take your horse on a swim!",
   price: 75,
   user: User.all.sample
 )
@@ -51,7 +51,7 @@ horse3 = Horse.new(
   age: 17,
   breed: "Oldenburger",
   location: "Oude Zutphenseweg 3A, Klarenbeek",
-  description: "Surely a gentleman (or gentlehorse) with a name like this.",
+  description: "Surely a gentleman (or gentlehorse) with a name like this. Great horse. Much horsey.",
   price: 80,
   user: User.all.sample
 )
