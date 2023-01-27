@@ -5,6 +5,7 @@ class HorsesController < ApplicationController
   def index
     if params[:query].present?
       @horses = Horse.search_by_breed_and_location_and_price(params[:query])
+      
     else
       @horses = Horse.order(created_at: :desc)
     end
