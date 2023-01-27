@@ -38,3 +38,18 @@ btn-nrm:hover {
   color: rgb(156, 48, 48);
   transition: 0.3s ease;
 }
+
+.btn-mare-bnb {
+  border: rgb(156, 48, 48);
+  padding: 8px;
+  background-color: rgb(156, 48, 48);
+  color: white;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  margin-left: 8px;
+
+}
+.btn-mare-bnb:hover {
+  color: #000;
+  transition: opacity 0.3s ease;
+}
