@@ -10,7 +10,7 @@
 
 .card-booking {
   overflow: hidden;
-  height: 200px;
+  height: 180px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -19,9 +19,9 @@
 }
 
 .card-booking img {
-  height: 100vh;
+  height: 100%;
   width:  15em;
-  object-fit: none;
+  object-fit: contain;
 }
 
 .card-booking h2 {

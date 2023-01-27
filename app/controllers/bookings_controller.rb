@@ -12,11 +12,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @bookings = Booking.new(booking_params)
-    @bookings.user = current_user
-    @bookings.horse = @horse
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.horse = @horse
 
-    if @bookings.save
+    if @booking.save
       redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
