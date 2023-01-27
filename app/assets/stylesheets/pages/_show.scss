@@ -48,7 +48,12 @@
   border-radius: 4px;
   margin-left: 20px;
 }
-.request-button {
+.btn-call {
+  // border: rgb(156, 48, 48);
+  // padding: 8px;
+  // background-color: rgb(156, 48, 48);
+  // color: white;
+  // border-radius: 25px;
   margin-top: 96px;
   margin-left: 16px;
   font-size: auto;
@@ -57,15 +62,15 @@
 .edit {
   margin-left: 80px;
 }
-.btn-show {
-  color: #4c4b4c;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
+.btn-nrm {
+  // color: #4c4b4c;
+  // border: 1px solid #4A4A4A;
+  // padding: 8px 24px;
+  // border-radius: 50px;
+  // font-weight: lighter;
+  // opacity: 0.6;
+  // transition: opacity 0.3s ease;
+  // text-decoration: none;
   margin-bottom: 8px;
 }
 .description {
