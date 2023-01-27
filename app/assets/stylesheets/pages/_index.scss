@@ -1,6 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: sans-serif;
@@ -86,7 +89,7 @@ h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   padding-left: 10px;
   //justify-content: space-around;
   font-size: 20px;
@@ -100,4 +103,16 @@ h2 {
   padding-top: 15px;
   padding-right: 10px;
   margin-left: 5px;
+  line-height: normal;
+}
+
+#container-for-shared {
+  margin-top: 90px;
+}
+
+.links-back-to {
+  line-height: normal;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: inline-flex
 }
