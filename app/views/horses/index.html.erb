@@ -6,7 +6,9 @@
   <% @horses.each do |horse|%>
     <div class="card-horse">
       <% if horse.photo.key %>
+      <div class="img-ind">
       <%= cl_image_tag horse.photo.key, height: 300, width: 400, crop: :fill %>
+      </div>
       <% end %>
     <div class="card-horse-infos">
       <h2><%=link_to horse.name, horse_path(horse) %></h2>
