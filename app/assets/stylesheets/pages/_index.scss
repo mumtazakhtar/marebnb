@@ -25,8 +25,9 @@ a {
   color: black;
 }
 a:hover {
-  color :rgb(156, 48, 48)
+  color: #53161b
 }
+
 h1 {
   font-size: 30px;
 }
@@ -47,7 +48,7 @@ h2 {
 }
 
 
-img {
+.card-horse img {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -75,10 +76,6 @@ img {
   width: 400px;
 }
 
-a:hover {
-  color: #53161B;
-}
-
 .card-horse .card-horse-infos {
   background-size: cover;
   background-position: center;
@@ -97,9 +94,13 @@ a:hover {
 }
 
 .info {
-  font-size: 15px;
+  font-size: 11px;
   padding-bottom: 15px;
-  padding-top: 5px;
+  padding-top: 15px;
   padding-right: 10px;
   margin-left: 5px;
+}
+
+#container-for-shared {
+  margin-top: 90px;
 }
