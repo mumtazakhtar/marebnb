@@ -29,8 +29,9 @@ a:hover {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
+
 h2 {
   font-size: 25px;
   margin-bottom: 20px;
@@ -51,6 +52,9 @@ h2 {
 .card-horse img {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
 }
 
 .cards-ind {

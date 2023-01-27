@@ -22,7 +22,7 @@
 
     <div id="booking-card">
       <h2>Booking</h2>
-      <p>€<%= @horse.price %> per day</p>
+      <p>€<%= @horse.price.to_i %> per day</p>
       <div class="btn-pg-show">
         <%= link_to 'Request a booking', root_path,  class: "btn-call"%>
       </div>
