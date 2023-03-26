@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[edit update]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings + current_user.received_bookings
   end
 
   def new
@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bookings_path
     else
-      render :new, status: :unprocessable_entity
+      render "horses/show", status: :unprocessable_entity
     end
   end
 
