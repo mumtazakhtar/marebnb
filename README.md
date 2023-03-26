@@ -26,11 +26,11 @@ The marebnb app is my project designed during the airbnb weeks of LeWagon 'full 
 
 
 
-![banner](https://github.com/mumtazakhtar/marebnb/blob/master/public/images/screenshots/marebnb_showpage.png?raw=true)
+![banner](https://github.com/mumtazakhtar/marebnb/blob/master/public/screenshots/marebnb_showpage.png?raw=true)
 > Visualization of show page  where you can see the details of the horse.
 
 
-![banner](https://github.com/mumtazakhtar/marebnb/blob/master/public/images/screenshots/marebnb_bookings.png?raw=true)
+![banner](https://github.com/mumtazakhtar/marebnb/blob/master/public/screenshots/marebnb_bookings.png?raw=true)
 > Visualization of bookings page wher users can manage their bookings as well as see their request from other users.
 
 
